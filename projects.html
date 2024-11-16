@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yagya Mandelia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(23, 21, 21);
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease, font-size 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #87CEEB;
+            font-size: 1.3rem;
+        }
+        .left {
+            font-size: 1.5rem;
+        }
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 100px 0;
+            scroll-margin-top: 80px;
+            padding-top: 80px;
+            margin-left: -116px;
+        }
+        .firstSection > div {
+            width: 100%;
+        }
+        .leftSection {
+            width: 34px;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .leftSection2 {
+            width: 100%;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            margin-left: 100px;
+            color: #87CEEB;
+        }
+        .TFM {
+            height: 80vh;
+            display: flex;
+        }
+        .TFMimage {
+            width: 30%;
+            margin-left: 100px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+        .TFMimage img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+        }
+        .cover {
+            opacity: 1;
+        }
+        /* Hidden images */
+        .hidden {
+            opacity: 0;
+        }
+        /* On hover, hide cover image */
+        .TFMimage:hover .cover {
+            opacity: 0;
+        }
+        /* Reveal images in an arc */
+        .TFMimage:hover .hidden {
+            opacity: 1;
+            transition-delay: 0.3s;
+        }
+        .content1 {
+            text-align: justify;
+            width: 50%;
+            margin-left: 40px;
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            color: white;
+        }
+        .TFM2 {
+            font-size: 1.5rem;
+            height: 100vm;
+        }
+        .leftSection3{
+            width: 100%;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            margin-top: 50px;
+            margin-left: 100px;
+            color: #87CEEB;
+        }
+        .NONAC {
+            height: 180vh;
+            display: flex;
+        }
+        .NONACimage {
+            width: 75%;
+            margin-left: 100px;
+            height: 350px;
+        }
+        .content2 {
+            text-align: justify;
+            width: 45%;
+            margin-left: -10px;
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            color: white;
+        }
+        .line1 {
+            color: red;  /* Change this to any color you like */
+        }
+        .line2{
+            color: red;
+        }
+        .line3{
+            color: red;
+        }
+        .line4{
+            color: red;
+        }
+        .line5{
+            color: red;
+        }
+        .line6{
+            color: red;
+        }
+        .line7{
+            font-size: .7rem;
+        }
+        .fourthSection{
+            margin-top: -450px;
+        }
+        .leftSection4{
+            width: 100%;
+            font-size: 2rem;
+            margin-top: 150px;
+            margin-bottom: 40px;
+            margin-left: 100px;
+            color: #87CEEB;
+        }
+        .Inc{
+            height: 100vh;
+            display: flex;
+        }
+        .Incimage {
+            width: 75%;
+            margin-left: 100px;
+            height: 350px;
+        }
+        .content3 {
+            text-align: justify;
+            width: 40%;
+            margin-left: -20px;
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            color: white;
+        }
+        .leftSection5{
+            width: 100%;
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            margin-left: 100px;
+            color: #87CEEB;
+        }
+        .Mi{
+            height: 80vh;
+            display: flex;
+        }
+        .Miimage {
+            width: 60%;
+            margin-left: 100px;
+            height: 350px;
+        }
+        .content4 {
+            text-align: justify;
+            width: 40%;
+            margin-left: -230px;
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            color: white;
+        }
+        .leftSection6{
+            width: 100%;
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            margin-left: 100px;
+            color: #87CEEB;
+        }
+        .CBC{
+            height: 70vh;
+            display: flex;
+        }
+        .CBCimage {
+            width: 80%;
+            margin-left: 100px;
+            height: 350px;
+        }
+        .content5 {
+            text-align: justify;
+            width: 40%;
+            margin-left: 15px;
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            color: white;
+        }
+        .leftSection7{
+            width: 100%;
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            margin-left: 100px;
+            color: #87CEEB;
+        }
+        .BS{
+            height: 80vh;
+            display: flex;
+        }
+        .BSimage {
+            width: 40%;
+            margin-left: 100px;
+            height: 350px;
+        }
+        .content6 {
+            text-align: justify;
+            width: 40%;
+            margin-left: 70px;
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            color: white;
+        }
+        .leftSection8{
+            width: 100%;
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            margin-left: 100px;
+            color: #87CEEB;
+        }
+        .S{
+            height: 85vh;
+            display: flex;
+        }
+        .Simage {
+            width: 75%;
+            margin-left: 100px;
+            height: 350px;
+        }
+        .content7 {
+            text-align: justify;
+            width: 40%;
+            margin-left: -80px;
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            color: white;
+        }
+        .leftSection9{
+            width: 100%;
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            margin-left: 100px;
+            color: #87CEEB;
+        }
+        .PS{
+            height: 70vh;
+            display: flex;
+        }
+        .PSimage {
+            width: 75%;
+            margin-left: 45px;
+            height: 350px;
+        }
+        .content8 {
+            text-align: justify;
+            width: 40%;
+            margin-left: -100px;
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            color: white;
+        }
+        .leftSection10{
+            width: 100%;
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            margin-left: 100px;
+            color: #87CEEB;
+        }
+        .D{
+            height: 80vh;
+            display: flex;
+        }
+        .Dimage{
+            width: 65%;
+            margin-left: 100px;
+            height: 350px;
+        }
+        .content9{
+            text-align: justify;
+            width: 40%;
+            margin-left: -100px;
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">YAGYA MANDELIA</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html" target="_blank">Main</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="projects" class="firstSection">
+            <div class="leftSection">I have contributed significantly to various films during my graduation</div>
+        </section>
+        <section class="secondSection">
+            <div class="leftSection2">Some of them include : 
+                <P class="line7"><br>Note: Images are hyperlinked</P>
+                <p><br>The Flowering Man (2023)</p>
+            </div>
+        </section>
+        <section class="TFM">
+            <div class="TFMimage">
+                <a href="https://www.youtube.com/watch?v=Nt2e0Sxkol8" target="_blank">
+                    <img src="TFM.jpeg" alt="Cover Image" class="cover">
+                    <img src="awardTFM.jpeg" alt="Photo 1" class="hidden">
+                </a>
+            </div>
+            <div class="content1">
+                <p><br>Sashi undergoes a metamorphosis as a flowering plant starts growing from inside his mouth. His distanced teenage daughter undertakes a journey towards embracing the new image of her father.</p>
+                <p><br>It was selected in the Competition Short Fiction Section at the 18th Mumbai International Film Festival - MIFF and screened at MAMI film festival 2023</p>
+                <p><br>I assisted in art, set building , sourcing props, handling action props and props making.</p>
+            </div>
+        </section>
+        <section class="thirdSection">
+            <div class="leftSection3">
+                <p>NON AC (2023)</p>
+            </div>
+        </section>
+        <section class="NONAC">
+            <a href="https://drive.google.com/file/d/1mHRjTvdrT1gWBwRrfmRrRXxxcoXeKw0L/view?usp=sharing" target="_blank"><img class="NONACimage" src="NONAC.jpeg" alt=""></a>
+            <div class="content2">
+                <p><br>Maya and Jorge are immigrants from Nepal,trying to make ends meet and survive in the city of Pune,India and are often left feeling like outsiders because of the treatment they receive as immigrants.They find solace in each other's company and their friendship starts to grow into something more meaningful whose foundations  somewhere  lies on the idea of 'Home'.The film explores the themes of Migration, Racism,Xenophobia,Economic Class differences that penetrates deep into Indian Society.</p>
+                <p class="line1"><br>FTII Diploma Short Fiction Film (2023)</p>
+                <p class="line2"><br>Role: Assistant Director & Art Assistant</p>
+                <p><br>Art Assistance: Contributed to the art department by preparing mood boards, assisting with set design, and managing action props. Responsible for sourcing and creating props for the scenes, ensuring they aligned with the overall vision of the film.</p>
+                <p><br>1st Assistant Director: Led the pre-production planning, including developing shooting schedules and master sheets. Coordinated logistics, ensured smooth communication between departments, and maintained actor briefings. Managed the set during production, keeping track of time, and ensuring that all tasks were completed on schedule.</p>
+            </div>
+        </section>
+        <section class="fourthSection">
+            <div class="leftSection4">
+                <p>Incomplete (2023)</p>
+            </div>
+        </section>
+        <section class="Inc">
+            <a href="https://drive.google.com/file/d/1zGGeKVBODdIquJDyGZKtNrjkZG3teyvm/view?usp=sharing" target="_blank"><img class="Incimage" src="INCP.jpeg" alt=""></a>
+            <div class="content3">
+                <p><br>This story follows Tara, a young woman battling alcoholism, as she makes the courageous decision to enter rehab. Facing intense withdrawal, emotional confrontations, and deep-seated family issues, she learns that sobriety is about much more than giving up alcohol—it’s about healing wounds, finding purpose, and redefining her relationships with herself and those around her.</p>
+                <p class="line3"><br>FTII Student Diploma Short Fiction Film (2023)</p>
+                <p class="line4"><br>Role: Art Director</p>
+                <p><br>Worked as an Art Director on this project, responsible for creating mood boards for set design, planning and executing design strategies, and curating property lists. Also involved in selecting color palettes and delegating tasks to assistant designers, ensuring smooth workflow and attention to detail throughout the production process.</p>
+            </div>
+        </section>
+        <section class="fifthSection">
+            <div class="leftSection5">
+                <p>Mishti (2023)</p>
+            </div>
+        </section>
+        <section class="Mi">
+            <a href="https://www.youtube.com/watch?v=bJpas98l9pM" target="_blank"><img class="Miimage" src="MISHTI.jpeg" alt=""></a>
+            <div class="content4">
+                <p><br>A middle aged lonely gangster meeting his enemy to ask him if he is as lonely as him.</p>
+                <p class="line5"><br>FTII Student Diploma Short Fiction Film (2023)</p>
+                <p class="line6"><br>Role: Art Assistant</p>
+                <p><br>Assisted in the art department, contributing to set design, managing action props, sourcing and organizing properties, and crafting some props for the scenes. Worked in alignment with the mood boards prepared by the Art Directors and Production Designer, ensuring the visual elements were consistent with the overall vision of the film.</p>
+            </div>
+        </section>
+        <section class="sixthSection">
+            <div class="leftSection6">
+                <p>Chori By Choice (2023)</p>
+            </div>
+        </section>
+        <section class="CBC">
+            <a href="https://drive.google.com/file/d/1-Xwz_d5WN-DVOU4ntzkdKRAoJg8hzlbu/view?usp=sharing" target="_blank"><img class="CBCimage" src="CBC.jpeg" alt=""></a>
+            <div class="content5">
+                <p><br>As Art Director for a student short-format fiction film created for the IFP 2023 World 50-Hour Film Making Challenge, I managed all aspects of art direction under tight constraints. This included framing shots on short notice, executing design work within a minimal budget, and sourcing and arranging all essential props to support the film’s visual aesthetic within the limited timeframe.</p>
+            </div>
+        </section>
+        <section class="seventhSection">
+            <div class="leftSection7">
+                <p>Bright Spot (2022)</p>
+            </div>
+        </section>
+        <section class="BS">
+            <img class="BSimage" src="BS.jpeg" alt=""></a>
+            <div class="content6">
+                <p><br>This documentary explores the lasting impact of the Mumbai attacks through the lens of untold, interwoven stories from various perspectives. It mixes historical reenactments, survivor interviews, archival footage, and fictionalized portrayals of those affected—creating a deeply immersive narrative that goes beyond the headlines.</p>
+                <p><br>In a documentary produced for the 2022 IFP 50-Hour Film Making Challenge, I served as both Assistant Director and Art Director. My responsibilities involved preparing frames quickly under tight deadlines, managing all design work within limited budgets and resources, and maintaining detailed clap and log sheets to streamline post-production.</p>
+            </div>
+        </section>
+        <section class="eighthSection">
+            <div class="leftSection8">
+                <p>Savli (2022)</p>
+            </div>
+        </section>
+        <section class="S">
+            <a href="https://www.youtube.com/watch?v=bJpas98l9pM" target="_blank"><img class="Simage" src="S.jpeg" alt=""></a>
+            <div class="content7">
+                <p><br>A man finds himself accidentally transported to the past, where he struggles with the fear that his current misfortunes might be the result of past mistakes. Unwillingly trapped in this moment, he desperately tries to understand the chain of events and whether his actions can still influence his future. The film explores themes of fate, regret, and the consequences of choices, as the protagonist tries to reconcile his present self with his unintentional journey through time.</p>
+                <p><br>As part of the art team for an FTII student diploma short-format fiction film (2022), I assisted in creating and arranging properties according to the mood board prepared by the art directors. My responsibilities included sourcing materials, crafting props, and keeping a meticulous track of action properties to ensure consistency in each scene.</p>
+            </div>
+        </section>
+        <section class="ninethSection">
+            <div class="leftSection9">
+                <p>Pasoori (2021)</p>
+            </div>
+        </section>
+        <section class="PS">
+            <a href="https://drive.google.com/file/d/1-0pskzk-PDDFbrG5AmbkTFhFPi88b0bs/view?usp=sharing" target="_blank"><img class="PSimage" src="Pasoori2.jpeg" alt=""></a>
+            <div class="content8">
+                <p><br>A music video of a romantic love triangle and breakup.</p>
+                <p><br>Role: First Assisstant Director</p>
+            </div>
+        </section>
+        <section class="tenthSection">
+            <div class="leftSection10">
+                <p>Doorbell (2023)</p>
+            </div>
+        </section>
+        <section class="D">
+            <a href="https://www.youtube.com/watch?v=qXaaNJNVUFE" target="_blank"><img class="Dimage" src="D2.jpeg" alt=""></a>
+            <div class="content9">
+                <p>A young boy undergoes a dilemma when his fiancé  gives him a surprise visit to his house when actually he was expecting someone else.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
