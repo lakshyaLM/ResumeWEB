@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yagya Mandelia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+        nav{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(23, 21, 21);
+            z-index: 1000;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease, font-size 0.3s ease;
+        }
+        nav ul li a:hover{
+            color: #87CEEB;
+            font-size: 1.3rem;
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 100px 0;
+            scroll-margin-top: 80px;
+            padding-top: 80px;
+            margin-left: -116px;
+            
+        }
+        .firstSection >  div{
+            width: 30%
+        }
+        .leftSection{
+            width: 34px;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+        .leftSection2{
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .content{
+            margin-top: 30px;
+            font-size: .9rem;
+            color: #87CEEB;
+        }
+        
+        .rightSection{
+            width: 34px;
+
+        }
+        .rightSection img{
+            width: 1500%;
+            border-radius: 20px;
+            margin-top: -300px;
+            margin-left: -250px;
+            transition: transform 0.3s ease;
+        }
+        .rightSection img:hover{
+            transform: scale(1.3);
+        }
+        
+        
+        
+
+        #element{
+            color: #87CEEB;
+        }
+        #element2{
+            color: #87CEEB;
+            margin-left: 20px;
+        }
+
+        
+        
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+        }
+        .secondSection h1 {
+            margin-bottom: 150px; 
+            font-size: 2rem;
+        }
+        .posters{
+            height: 200vh;
+            width: 100%;
+            display: flex;
+        }
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            margin-top: -100px;
+        }
+        .marquee-content {
+            display: flex;
+            animation: scroll 50s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-1000%); }
+        }
+        .p1{
+            height: 700px;
+            width: 40%;
+            margin-top: -100px;
+            margin-right: 20px; /* Adds a 20px gap between images */
+            flex-shrink: 0;
+        }
+        .p1 img{
+            height: 100%; /* Ensure image fits the container */
+            width: 100%;
+            object-fit: cover;
+        }
+        .p2{
+            height: 700px;
+            width: 80%;
+            margin-top: -100px;
+            margin-right: 20px; /* Adds a 20px gap between images */
+            flex-shrink: 0;
+        }
+        .p2 img{
+            height: 100%; /* Ensure image fits the container */
+            width: 100%;
+            object-fit: cover;
+        }
+        .thirdSection{
+            scroll-margin-top: 80px;
+            padding-top: 80px;
+            max-width: 80vw;
+            margin: auto;
+            height: 200vh;
+        }
+        .thirdSection h1{
+            margin-bottom: 70px;
+            font-size: 2rem;
+        }
+        .left2{
+            display: flex;
+            margin-top: 70px;
+        }
+        .image-top2{
+            border-radius: 20px;
+            width: 120%;
+            margin-right: 150px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .image-top2:hover{
+            transform: scale(1.3);
+        }
+        .intro{
+            font-size: 1.5rem;
+            color: white;
+        }
+        .skillset{
+            margin-top: 30px;
+            margin-bottom: 100px;
+            font-size: 1.5rem;
+            display: flex;
+        }
+        .certificates{
+            margin-top: 100px;
+            font-size: 1.5rem;
+            display: flex;
+        }
+        .c1 img{
+            height: 100%; /* Ensure image fits the container */
+            width: 85%;
+        }
+        .video-section iframe {
+            width: 80%; /* Ensures the iframe scales down on smaller screens */
+            height: 500px;    /* Maintains aspect ratio when scaling */
+            border: none;     /* Removes default border */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for emphasis */
+            margin-top: 7px; /* Adds space above the video */
+            margin-bottom: 300px;
+            transition: transform 0.3s ease; /* Smooth hover effect */
+        }       
+
+        .video-section iframe:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        footer{
+            background-color: rgb(23, 21, 21); 
+            height: 200px;
+            margin-top: 300px;
+        }
+        .footer{
+            display: flex;
+            margin-left: 650px;
+        }
+        .footer2{
+            display: flex;
+        }
+        .footer2 img{
+            height: 30px;
+            width: 30px;
+            margin-left: 270px; /*220px; */
+            margin-top: 50px;
+        }
+        .f1{
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">YAGYA MANDELIA</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="projects.html" target="_blank">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile" class="firstSection">
+            <div class="leftSection">
+                <div>
+                    Welcome to Yagya Mandelia’s portfolio. I’m an Assistant Director and Art Director, specializing in visual design for films, music videos, and series. I bring stories to life through planning, on-set management, and creative set design. Explore my work to see how I combine artistry and precision.
+                </div>
+            <div class="leftSection2" style="white-space: nowrap;">
+                <div>My Proficiency:</div>
+                <span id="element"></span>
+                <div>Looking forward to work with you</div>
+                <div class="content">Note: Click image for resume</div>
+            </div>
+            </div>
+            <a href="CV.pdf" target="_blank"><div class="rightSection"><img src="DP.jpeg" alt=""></div></a>
+        </section>
+
+        <section class="secondSection">
+            <h1>Work Experience</h1>
+            <div class="marquee">
+                <div class="marquee-content">
+                    <!-- Each .p1 div represents one image in the marquee -->
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                    <div class="p1"><img src="TFM.jpeg" alt="Image 1"></div>
+                    <div class="p1"><img src="Mishti2.jpeg" alt="Image 2"></div>
+                    <div class="p2"><img src="pasoori.jpeg" alt="Image 3"></div>
+                    <div class="p1"><img src="NS.png" alt="Image 4"></div>
+                    <div class="p1"><img src="D.jpg" alt="Image 5"></div>
+                    
+                </div>
+            </div>
+                <!-- <div class="p1"><a href=""><img src="TFM.jpeg" alt=""></a></div> -->
+                <!-- <div class="p2"><a href=""><img src="Mishti2.jpeg" alt=""></a></div>
+                <div class="p3"><a href=""><img src="NS.png" alt=""></a></div>
+                <div class="p4"><a href=""><img src="D.jpg" alt=""></a></div>
+                <div class="p5"><a href=""><img src="pasoori.jpeg" alt=""></a></div>
+                <div class="p6"><a href=""><img src="download.jpeg" alt=""></a></div> -->
+            </div>
+        </section>
+
+        <section id="skills" class="thirdSection">
+            <h1 style="color: #87CEEB;">Checkout My Qualifications and Skills</h1>
+                <div class="intro">
+                    <div style="text-align: justify;">
+                        Graduated in BA journalim and Mass communion from MITWPU, Pune. I have also done a 3 months certificate coarse of graphic designing from INISD, Gwalior. 
+                        I have 3 years of experience working on various film projects as an Intern and Freelancer. Through my career, I’ve had the opportunity to work in multiple Short Films , Music videos and Series as a Production Designer, Art Director, 1stAssistant Director, 2nd Assistant Director, Assistant to assistant Director, Director’s Assistant. I’ve worked in Various FTII projects as a freelancer & recently interned with a Delhi based Company called Grey Blue Ventures on a commic series as an Art Director and Third Ad, where i sharpen up my skills and learn to adapt to different aspects of filmmaking. I am excited to continue taking new challenges and projects in the industry.
+                    </div>
+                </div>
+            </div>
+            <div class="skillset">I am skillful with :
+                <span id="element2"></span>
+            </div>
+            <div class="certificates">
+                <div class="c1"><img src="c1.jpeg" alt=""></div>
+                <div class="c1"><img src="c2.jpeg" alt=""></div>
+                <div class="c1"><img src="c3.jpeg" alt=""></div>
+                <div class="c1"><img src="c4.jpeg" alt=""></div>
+            </div>
+            <div class="video-section" style="text-align: center; margin-top: 50px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8mdP_k8w26U?si=-4X5H_GieMCOQTec" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+        <footer id="contact">
+            <div class="footer">
+                <div class="f1"><h3>CONTACT</h3></div>
+            </div>
+            <div class="footer2">
+                <a href="https://www.instagram.com/yagya03_/profilecard/?igsh=MWI5MGY3bjQ3NmczMg==" target="_blank"><img src="insta.jpg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/yagya-mandelia-2a4a20238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><img src="linkedin.jpg" alt="LinkedIn"></a>
+                <a href="https://wa.me/918770897959" target="_blank"><img src="whatsapp.jpg" alt="Whatsapp"></a>
+                <a href="mailto:yagyam03@gmail.com" target="_blank"><img src="mail.png" alt="GMail"></a>
+                <!-- <a href="tel:8770897959" target="_blank"><img src="phone.png" alt="Phone"></a> -->
+            </div>
+        </footer>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+   
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Assisstant Director', 'Art Director'],
+      typeSpeed: 50,
+      loop: true,
+    });
+    var typed = new Typed('#element2', {
+      strings: ['PowerPoint', 'MicroSoft Excel', 'Photoshop', 'Canva','Coral'],
+      typeSpeed: 40,
+      loop: true,
+    });
+  </script>
+</body>
+</html>
