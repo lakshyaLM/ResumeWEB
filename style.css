@@ -1,0 +1,357 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+    background-color: rgb(23, 21, 21);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #87CEEB;
+    font-size: 1.1rem;
+}
+
+.left {
+    font-size: 1.5rem;
+}
+
+/* First Section */
+.firstSection {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    scroll-margin-top: 80px;
+}
+
+.firstSection > div {
+    flex: 1 1 300px;
+    margin: 70px;
+}
+
+.leftSection {
+    font-size: 1.5rem;
+    margin-top: 50px;
+    text-align: justify;
+    max-width: 50%;
+}
+
+.leftSection2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #87CEEB;
+}
+
+/* Images in First Section */
+.rightSection img {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.rightSection img:hover {
+    transform: scale(1.05);
+}
+
+/* Second Section */
+.secondSection {
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.secondSection h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -30px;
+}
+.marquee-content {
+    display: flex;
+    animation: scroll 50s linear infinite;
+}
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-1000%); }
+}
+.p1{
+    height: 1000px;
+    width: 30%;
+    margin-top: -100px;
+    margin-right: -70px; /* Adds a 20px gap between images */
+    flex-shrink: 0;
+}
+.p1 img{
+    height: 900; /* Ensure image fits the container */
+    width: 80%;
+    object-fit: cover;
+}
+.p2{
+    height: 700px;
+    width: 140%;
+    margin-top: -100px;
+    margin-right: 150px; /* Adds a 20px gap between images */
+    margin-left: 40px;
+    flex-shrink: 0;
+}
+.p2 img{
+    height: 100%; /* Ensure image fits the container */
+    width: 140%;
+    object-fit: cover;
+}
+/* Third Section */
+.thirdSection {
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding: 60px 0;
+    scroll-margin-top: 80px;
+}
+
+.thirdSection h1 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.image-top2 {
+    border-radius: 20px;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.image-top2:hover {
+    transform: scale(1.05);
+}
+
+.intro {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.skillset{
+    text-align: justify;
+}
+.certificates {
+    margin-top: 100px;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between certificates */
+}
+
+/* Certificates */
+.certificates img {
+    height: 200px;
+    width: 200%; /* Increase width significantly */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    margin: 0 auto; /* Center image within the container */
+}
+
+.certificates img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Video Section */
+.video-section iframe {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease;
+}
+
+.video-section iframe:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: rgb(23, 21, 21);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer2 img {
+    height: 30px;
+    width: 30px;
+    margin: 10px 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer2 a img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Responsive Design */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .firstSection {
+        margin: 100px 10px 40px;
+    }
+
+    .rightSection img {
+        max-width: 300px;
+    }
+
+    .secondSection h1,
+    .thirdSection h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .skillset,
+    .certificates {
+        font-size: 1rem;
+    }
+
+    .video-section iframe {
+        width: 90%;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    .posters img {
+        max-height: 250px;
+        margin: 0 10px;
+    }
+
+    .marquee {
+        margin-bottom: 10px;
+    }
+
+    /* Marquee images */
+    .p1, .p2 {
+        height: 500px;
+        width: 40%;
+    }
+
+    .p1 img, .p2 img {
+        object-fit: cover;
+    }
+
+    .certificates {
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .certificates img {
+        max-width: 120px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .p1, .p2 {
+        height: 400px;
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    .certificates {
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .certificates img {
+        max-width: 120px;
+    }
+
+    .marquee {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .certificates {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificates img {
+        width: 80%;
+        max-width: 100px;
+    }
+
+    .p1, .p2 {
+        height: 300px;
+        width: 100%;
+    }
+}
