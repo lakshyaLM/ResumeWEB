@@ -352,13 +352,58 @@
         margin-top: 10px;
     }
 
-    /* Media Queries for Responsiveness */
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 768px) {
         .TFMimage, .NONACimage, .Incimage, .Miimage, .CBCimage, .BSimage, .Simage, .PSimage, .Dimage {
-            width: 60%;
-            margin-left: 50px;
+            width: 80%;
+            margin-left: 20px;
+            height: 300px;
         }
-        .content1, .content2, .content3, .content4, .content5, .
+        .content1, .content2, .content3, .content4, .content5, .content6, .content7, .content8, .content9 {
+            width: 100%;
+            margin-left: 10px;
+        }
+        .leftSection, .leftSection2, .leftSection3, .leftSection4, .leftSection5 {
+            font-size: 1.5rem;
+            margin-left: 0;
+            text-align: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Mobile Phones (iPhone 14 and similar) */
+    @media screen and (max-width: 390px) {
+        nav ul li {
+            margin: 0 5px;
+        }
+        nav ul li a {
+            font-size: 0.8rem;
+        }
+        .leftSection {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .TFMimage, .NONACimage, .Incimage, .Miimage, .CBCimage, .BSimage, .Simage, .PSimage, .Dimage {
+            width: 90%;
+            margin-left: 0;
+            height: 250px;
+        }
+        .content1, .content2, .content3, .content4, .content5, .content6, .content7, .content8, .content9 {
+            width: 100%;
+            font-size: 1rem;
+        }
+        footer {
+            height: 150px;
+        }
+        .footer2 img {
+            margin-left: 10px;
+            margin-top: 20px;
+        }
     }
 
 </style>
