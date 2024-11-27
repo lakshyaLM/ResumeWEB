@@ -24,7 +24,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    height: 70px;
+    height: 100px;
     background-color: rgb(23, 21, 21);
     z-index: 1000;
 }
@@ -129,20 +129,20 @@ nav ul li a:hover {
     height: 1000px;
     width: 30%;
     margin-top: -100px;
-    margin-right: -70px; /* Adds a 20px gap between images */
+    margin-right: -180px; /* Adds a 20px gap between images */
     flex-shrink: 0;
 }
 .p1 img{
     height: 900; /* Ensure image fits the container */
-    width: 80%;
+    width: 60%;
     object-fit: cover;
 }
 .p2{
     height: 700px;
     width: 140%;
     margin-top: -100px;
-    margin-right: 150px; /* Adds a 20px gap between images */
-    margin-left: 40px;
+    margin-right: 125px; /* Adds a 20px gap between images */
+    margin-left: 100px;
     flex-shrink: 0;
 }
 .p2 img{
@@ -339,19 +339,56 @@ footer {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 390px) {
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .leftSection {
+        font-size: 1rem;
+        margin-top: 20px;
+        text-align: justify;
+    }
+
+    .rightSection img {
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .secondSection h1,
+    .thirdSection h1 {
+        font-size: 1.2rem;
+    }
+
+    .intro {
+        font-size: 0.9rem;
+    }
+
+    .skillset {
+        font-size: 0.9rem;
+    }
+
     .certificates {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
+        font-size: 1rem;
     }
 
     .certificates img {
-        width: 80%;
-        max-width: 100px;
+        width: 70%;
+        max-width: 150px;
     }
 
-    .p1, .p2 {
-        height: 300px;
+    .p1,
+    .p2 {
+        height: 250px;
         width: 100%;
+        margin-right: 0;
     }
 }
+
