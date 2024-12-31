@@ -356,11 +356,16 @@
 
     /* Mobile Phones (iPhone 14 and similar) */
     /* Responsive Design for 1440px Screens */
-    @media only screen and (max-width: 1440px) {
-        .TFMimage, .NONACimage, .Incimage, .Miimage, .CBCimage, .BSimage, .Simage, .PSimage, .Dimage {
-            width: 40%;
+    @media only screen and (max-width: 1300px) {
+        .NONACimage, .Incimage, .Miimage, .CBCimage, .BSimage, .Simage, .PSimage, .Dimage {
+            width: 85%;
             margin-left: 20px;
             height: 200px;
+        }
+        .TFMimage{
+            height:300px;
+            width:50%;
+            margin-left:20px;
         }
         .content1, .content2, .content3, .content4, .content5, .content6, .content7, .content8, .content9 {
             width: 70%;
@@ -370,6 +375,7 @@
         .leftSection, .leftSection2, .leftSection3, .leftSection4, .leftSection5, .leftSection6, .leftSection7, .leftSection8, .leftSection9, .leftSection10 {
             font-size: .7rem;
             margin-left: 20px;
+            margin-top:-130px
         }
         nav ul li {
             margin: 0 15px;
