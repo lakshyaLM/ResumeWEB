@@ -356,19 +356,19 @@
 
     /* Mobile Phones (iPhone 14 and similar) */
     /* Responsive Design for 1440px Screens */
-    @media screen and (max-width: 1440px) {
+    @media only screen and (max-width: 1440px) {
         .TFMimage, .NONACimage, .Incimage, .Miimage, .CBCimage, .BSimage, .Simage, .PSimage, .Dimage {
-            width: 60%;
+            width: 40%;
             margin-left: 50px;
             height: 400px;
         }
         .content1, .content2, .content3, .content4, .content5, .content6, .content7, .content8, .content9 {
             width: 50%;
             margin-left: 20px;
-            font-size: 1.15rem;
+            font-size: .7rem;
         }
         .leftSection, .leftSection2, .leftSection3, .leftSection4, .leftSection5, .leftSection6, .leftSection7, .leftSection8, .leftSection9, .leftSection10 {
-            font-size: 1.8rem;
+            font-size: .7rem;
             margin-left: 50px;
         }
         nav ul li {
