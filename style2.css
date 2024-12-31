@@ -352,58 +352,39 @@
         margin-top: 10px;
     }
 
-    @media screen and (max-width: 768px) {
+   
+
+    /* Mobile Phones (iPhone 14 and similar) */
+    /* Responsive Design for 1440px Screens */
+    @media screen and (max-width: 1440px) {
         .TFMimage, .NONACimage, .Incimage, .Miimage, .CBCimage, .BSimage, .Simage, .PSimage, .Dimage {
-            width: 80%;
-            margin-left: 20px;
-            height: 300px;
+            width: 60%;
+            margin-left: 50px;
+            height: 400px;
         }
         .content1, .content2, .content3, .content4, .content5, .content6, .content7, .content8, .content9 {
-            width: 100%;
-            margin-left: 10px;
+            width: 50%;
+            margin-left: 20px;
+            font-size: 1.15rem;
         }
-        .leftSection, .leftSection2, .leftSection3, .leftSection4, .leftSection5 {
-            font-size: 1.5rem;
-            margin-left: 0;
-            text-align: center;
+        .leftSection, .leftSection2, .leftSection3, .leftSection4, .leftSection5, .leftSection6, .leftSection7, .leftSection8, .leftSection9, .leftSection10 {
+            font-size: 1.8rem;
+            margin-left: 50px;
         }
         nav ul li {
-            margin: 0 10px;
+            margin: 0 15px;
         }
         nav ul li a {
-            font-size: 0.9rem;
+            font-size: 1.1rem;
+        }
+        footer {
+            height: 180px;
+        }
+        .footer2 img {
+            margin-left: 200px;
+            margin-top: 30px;
         }
     }
 
-    /* Mobile Phones (iPhone 14 and similar) */
-    @media screen and (max-width: 390px) {
-        nav ul li {
-            margin: 0 5px;
-        }
-        nav ul li a {
-            font-size: 0.8rem;
-        }
-        .leftSection {
-            font-size: 1.2rem;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .TFMimage, .NONACimage, .Incimage, .Miimage, .CBCimage, .BSimage, .Simage, .PSimage, .Dimage {
-            width: 90%;
-            margin-left: 0;
-            height: 250px;
-        }
-        .content1, .content2, .content3, .content4, .content5, .content6, .content7, .content8, .content9 {
-            width: 100%;
-            font-size: 1rem;
-        }
-        footer {
-            height: 150px;
-        }
-        .footer2 img {
-            margin-left: 10px;
-            margin-top: 20px;
-        }
-    }
 
 </style>
