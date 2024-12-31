@@ -320,10 +320,15 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
-    .p1, .p2 {
+    .p1{
         height: 400px;
         width: 100%;
         margin-right: 10px;
+    }
+    .p2{
+        height: 400px;
+        width: 100%;
+        margin-right: 40px;
     }
 
     .certificates {
@@ -339,6 +344,9 @@ footer {
         margin-bottom: 10px;
     }
 }
+    .footer2 {
+        margin-right: 10px;
+    }
 
 @media screen and (max-width: 390px) {
     nav ul li {
