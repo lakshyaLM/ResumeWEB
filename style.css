@@ -60,6 +60,7 @@ nav ul li a:hover {
     flex-wrap: wrap;
     margin-left: 50px;
     scroll-margin-top: 80px;
+    margin-top: 100px;
 }
 
 .firstSection > div {
@@ -125,31 +126,27 @@ nav ul li a:hover {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-1000%); }
 }
-.p1{
-    height: 1000px;
-    width: 30%;
+.p1 {
     margin-top: -100px;
-    margin-right: -180px; /* Adds a 20px gap between images */
     flex-shrink: 0;
 }
-.p1 img{
-    height: 900; /* Ensure image fits the container */
-    width: 60%;
+.p1 img {
+    height: 500px; /* Added 'px' for proper units */
+    width: 80%; /* Ensure image width matches the container */
     object-fit: cover;
+    
 }
-.p2{
-    height: 700px;
-    width: 140%;
+.p2 {
     margin-top: -100px;
-    margin-right: 125px; /* Adds a 20px gap between images */
-    margin-left: 100px;
     flex-shrink: 0;
+    margin-right: -20px;
 }
-.p2 img{
-    height: 100%; /* Ensure image fits the container */
-    width: 140%;
+.p2 img {
+    height: 400px; /* Ensure image fits the container */
+    width: 100%; /* Ensure image width matches the container */
     object-fit: cover;
 }
+
 /* Third Section */
 .thirdSection {
     max-width: 90vw;
@@ -196,13 +193,13 @@ nav ul li a:hover {
 /* Certificates */
 .certificates img {
     height: 200px;
-    width: 200%; /* Increase width significantly */
+    width: 100%; /* Increase width significantly */
     transition: transform 0.3s ease, filter 0.3s ease;
-    margin: 0 auto; /* Center image within the container */
+    margin-right: 30px; /* Center image within the container */
 }
 
 .certificates img:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
     filter: brightness(1.2);
 }
 
@@ -250,18 +247,17 @@ footer {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1300px) {
     nav ul li {
         margin: 0 10px;
     }
 
     nav ul li a {
-        font-size: 0.5rem;
+        font-size: 0.9rem;
     }
 
     .firstSection {
         margin: 100px 10px 40px;
-        
     }
 
     .rightSection img {
@@ -299,7 +295,7 @@ footer {
         margin-bottom: 10px;
     }
 
-    /* Marquee images */
+    /* Marquee images */ 
     .p1, .p2 {
         height: 500px;
         width: 40%;
@@ -307,11 +303,6 @@ footer {
 
     .p1 img, .p2 img {
         object-fit: cover;
-    }
-    .p2{
-        height: 400px;
-        width: 100%;
-        margin-right: 40px;
     }
 
     .certificates {
@@ -322,18 +313,11 @@ footer {
     .certificates img {
         max-width: 120px;
     }
-}
 
-@media screen and (max-width: 1024px) {
-    .p1{
+    .p1, .p2 {
         height: 400px;
         width: 100%;
         margin-right: 10px;
-    }
-    .p2{
-        height: 400px;
-        width: 100%;
-        margin-right: 40px;
     }
 
     .certificates {
@@ -349,60 +333,6 @@ footer {
         margin-bottom: 10px;
     }
 }
-    .footer2 {
-        margin-right: 10px;
-    }
 
-@media screen and (max-width: 390px) {
-    nav ul li {
-        margin: 0 5px;
-    }
 
-    nav ul li a {
-        font-size: 0.8rem;
-    }
-
-    .leftSection {
-        font-size: 1rem;
-        margin-top: 20px;
-        text-align: justify;
-    }
-
-    .rightSection img {
-        max-width: 100%;
-        border-radius: 15px;
-    }
-
-    .secondSection h1,
-    .thirdSection h1 {
-        font-size: 1.2rem;
-    }
-
-    .intro {
-        font-size: 0.9rem;
-    }
-
-    .skillset {
-        font-size: 0.9rem;
-    }
-
-    .certificates {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        font-size: 1rem;
-    }
-
-    .certificates img {
-        width: 70%;
-        max-width: 150px;
-    }
-
-    .p1,
-    .p2 {
-        height: 250px;
-        width: 100%;
-        margin-right: 0;
-    }
-}
 
